@@ -1,7 +1,5 @@
 <div class="mb-4 max-w-sm m-auto flex justify-center flex-col min-h-screen">
-  <h1 class="mb-6 text-3xl font-mono">
-    hello, I am <strong>{{ name || "awesome" }}</strong>
-  </h1>
+  <app-title [name]="name" />
   <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
     Name
   </label>
