@@ -5,11 +5,23 @@ import { Component } from '@angular/core';
   templateUrl: './server-collections.component.html',
 })
 export class ServerCollectionsComponent {
-  allowNewServer = false;
+  isAllowNewServer = false;
 
-  constructor(){
-    setTimeout(()=> {
-      this.allowNewServer = true
-    }, 2000)
+  isCreatedNewServer = false;
+  status = 'offline';
+
+  constructor() {
+    setTimeout(() => {
+      this.isAllowNewServer = true;
+    }, 2000);
+  }
+
+  private setServerStatus(isCreated = false) {
+    return isCreated ? 'online' : 'offline';
+  }
+
+  onCreateServer() {
+    this.isCreatedNewServer = !this.isCreatedNewServer;
+    this.status = this.setServerStatus(this.isCreatedNewServer);
   }
 }
