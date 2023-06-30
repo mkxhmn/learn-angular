@@ -7,6 +7,7 @@ import { TitleComponent } from './title/title.component';
 import { ServerComponent } from './server/server.component';
 import { ServerCollectionsComponent } from './server-collections/server-collections.component';
 import { CardComponent } from './card/card.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CardComponent } from './card/card.component';
     ServerComponent,
     ServerCollectionsComponent,
     CardComponent,
+    DataBindingComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
