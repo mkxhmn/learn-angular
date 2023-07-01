@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServerCollectionsComponent } from './server-collections/server-collections.component';
 import { CardComponent } from './card/card.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { ConditionalDataComponent } from './conditional-data/conditional-data.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     ServerCollectionsComponent,
     CardComponent,
     DataBindingComponent,
+    ConditionalDataComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
