@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './conditional-data.component.html',
 })
 export class ConditionalDataComponent {
-  isRage = false;
+  isPeaceful = true;
 
   onToggle() {
-    this.isRage = !this.isRage;
+    this.isPeaceful = !this.isPeaceful;
   }
 }
