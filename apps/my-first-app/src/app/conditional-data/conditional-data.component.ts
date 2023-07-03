@@ -10,4 +10,8 @@ export class ConditionalDataComponent {
   onToggle() {
     this.isPeaceful = !this.isPeaceful;
   }
+
+  getColor() {
+    return this.isPeaceful ? 'blue' : 'red';
+  }
 }
