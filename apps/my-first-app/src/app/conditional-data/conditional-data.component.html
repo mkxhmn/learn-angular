@@ -1,5 +1,8 @@
 <div class="h-8 flex items-center mb-6">
-  <span class="flex" [ngStyle]="{ color: getColor() }"
+  <span
+    class="flex py-2"
+    [ngStyle]="{ color: getColor() }"
+    [ngClass]="{ online: isPeaceful }"
     >༼ つ <span *ngIf="isPeaceful; else isRage">◕_◕</span>
     <ng-template #isRage>
       <span>ಠ益ಠ</span>
