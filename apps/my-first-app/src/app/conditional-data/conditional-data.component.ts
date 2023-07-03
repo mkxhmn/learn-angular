@@ -13,6 +13,11 @@ import { Component } from '@angular/core';
 })
 export class ConditionalDataComponent {
   isPeaceful = true;
+  friends = [1];
+
+  onAddFriend() {
+    this.friends.push(new Date().getTime());
+  }
 
   onToggle() {
     this.isPeaceful = !this.isPeaceful;
