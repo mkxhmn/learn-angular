@@ -1,0 +1,23 @@
+<p class="font-mono font-bold">{{ data }}</p>
+<section class="mt-4 grid grid-rows-2 gap-4">
+  <div>
+    <label>one way data binding (input)</label>
+    <input
+      class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="name"
+      type="text"
+      placeholder="what is your name?"
+      (input)="onUpdateData($event)"
+    />
+  </div>
+  <div>
+    <label>two ways data binding (ngModel)</label>
+    <input
+      class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="name"
+      type="text"
+      placeholder="what is your name?"
+      [(ngModel)]="data"
+    />
+  </div>
+</section>
