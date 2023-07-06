@@ -1,1 +1,18 @@
-<p>recipe-detail works!</p>
+<div>
+  <div>
+    <img />
+  </div>
+</div>
+<div>
+  <h1>recipe name</h1>
+  <app-dropdown
+    label="manage recipe"
+    [options]="[
+      { href: '#', label: 'to shopping list' },
+      { href: '#', label: 'edit recipe' },
+      { href: '#', label: 'delete recipe' }
+    ]"
+  />
+  <div>description</div>
+  <div>ingredients</div>
+</div>
