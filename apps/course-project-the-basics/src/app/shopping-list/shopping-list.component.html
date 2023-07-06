@@ -1,0 +1,11 @@
+<section>
+  <app-shopping-edit />
+  <hr class="my-4" />
+  <ul class="list-disc list-inside">
+    <li *ngFor="let ingredient of ingredients">
+      <a class="cursor-pointer"
+        >{{ ingredient.name }} x{{ ingredient.amount }}</a
+      >
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,18 @@
+<div>
+  <div>
+    <img />
+  </div>
+</div>
+<div>
+  <h1 class="text-2xl font-bold">recipe name</h1>
+  <app-dropdown
+    label="manage recipe"
+    [options]="[
+      { href: '#', label: 'to shopping list' },
+      { href: '#', label: 'edit recipe' },
+      { href: '#', label: 'delete recipe' }
+    ]"
+  />
+  <div>description</div>
+  <div>ingredients</div>
+</div>
