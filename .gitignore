@@ -35,3 +35,4 @@ yarn-error.log*
 # vercel
 .vercel
 apps/assignment-3-practicing-directives/.vscode
+apps/databinding-deep-dive/.vscode
