@@ -1,18 +1,27 @@
 import { Component } from '@angular/core';
-
-type ServersProps = {
-  type: string;
-  name: string;
-  content: string;
-};
+import { ServerProps } from './server-element/server-element.component';
+import { CreateProps } from './cockpit/cockpit.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  servers: ServersProps[] = [];
+  servers: ServerProps[] = [];
 
-  newServerName = '';
-  newServerContent = '';
+  onCreatingServer(server: CreateProps) {
+    this.servers.push({
+      name: server.name,
+      content: server.content,
+      type: 'server',
+    });
+  }
+
+  onCreatingBlueprint(blueprint: CreateProps) {
+    this.servers.push({
+      name: blueprint.name,
+      content: blueprint.content,
+      type: 'blueprint',
+    });
+  }
 }

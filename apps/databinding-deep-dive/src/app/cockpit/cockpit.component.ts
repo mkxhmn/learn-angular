@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
-type ServerElementsProps = {
-  type: string;
+export type CreateProps = {
   name: string;
   content: string;
 };
@@ -12,24 +11,23 @@ type ServerElementsProps = {
   styleUrls: ['./cockpit.component.css'],
 })
 export class CockpitComponent {
-  serverElements: ServerElementsProps[] = [];
+  @Output() serverData = new EventEmitter<CreateProps>();
+  @Output() blueprintData = new EventEmitter<CreateProps>();
 
-  newServerName = '';
-  newServerContent = '';
+  name = '';
+  content = '';
 
   onAddServer() {
-    this.serverElements.push({
-      type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent,
+    this.serverData.emit({
+      name: this.name,
+      content: this.content,
     });
   }
 
   onAddBlueprint() {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent,
+    this.blueprintData.emit({
+      name: this.name,
+      content: this.content,
     });
   }
 }
