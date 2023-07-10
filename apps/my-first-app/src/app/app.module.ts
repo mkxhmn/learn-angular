@@ -9,6 +9,9 @@ import { ServerCollectionsComponent } from './server-collections/server-collecti
 import { CardComponent } from './card/card.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { ConditionalDataComponent } from './conditional-data/conditional-data.component';
+import { LocalReferencesComponent } from './local-references/local-references.component';
+import { HelloComponent } from './local-references/hello/hello.component';
+import { LocalDangerouslyComponent } from './local-dangerously/local-dangerously.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { ConditionalDataComponent } from './conditional-data/conditional-data.co
     CardComponent,
     DataBindingComponent,
     ConditionalDataComponent,
+    LocalReferencesComponent,
+    HelloComponent,
+    LocalDangerouslyComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
