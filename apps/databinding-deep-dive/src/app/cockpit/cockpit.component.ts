@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 export type CreateProps = {
   name: string;
@@ -13,6 +19,12 @@ export type CreateProps = {
 export class CockpitComponent {
   @Output() serverData = new EventEmitter<CreateProps>();
   @Output() blueprintData = new EventEmitter<CreateProps>();
+
+  @ViewChild('serverNameInput') serverNameInput:
+    | ElementRef<HTMLInputElement>
+    | undefined;
+  @ViewChild('serverContentInput')
+  serverContentInput: ElementRef<HTMLInputElement> | undefined;
 
   name = '';
   content = '';
@@ -29,5 +41,18 @@ export class CockpitComponent {
       name: this.name,
       content: this.content,
     });
+  }
+
+  onServerAddition(type: 'server' | 'blueprint') {
+    const data = {
+      name: this.serverNameInput?.nativeElement?.value ?? '',
+      content: this.serverContentInput?.nativeElement?.value ?? '',
+    };
+
+    if (type === 'server') {
+      this.serverData.emit(data);
+    } else {
+      this.blueprintData.emit(data);
+    }
   }
 }

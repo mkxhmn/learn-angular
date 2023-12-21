@@ -7,7 +7,13 @@ import { CreateProps } from './cockpit/cockpit.component';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  servers: ServerProps[] = [];
+  servers: ServerProps[] = [
+    {
+      type: 'server',
+      name: 'first server',
+      content: 'hello world',
+    },
+  ];
 
   onCreatingServer(server: CreateProps) {
     this.servers.push({

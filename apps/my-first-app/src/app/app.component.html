@@ -3,8 +3,8 @@
 >
   <section class="max-w-screen-xl grid lg:grid-cols-3 grid-cols-1 gap-6 px-4">
     <app-card title="lesson 01">
-      <app-title [name]="name" />
-      <label for="username"> Name </label>
+      <app-title [name]="name"/>
+      <label [for]="name"> Name </label>
       <input
         class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="name"
@@ -14,19 +14,19 @@
       />
     </app-card>
     <app-card title="lesson 02">
-      <app-server-collections />
+      <app-server-collections/>
     </app-card>
     <app-card title="Data Binding">
-      <app-data-binding />
+      <app-data-binding/>
     </app-card>
     <app-card title="conditional">
-      <app-conditional-data />
+      <app-conditional-data/>
     </app-card>
     <app-card title="local reference">
-      <app-local-references />
+      <app-local-references/>
     </app-card>
     <app-card title="local reference (viewChild)">
-      <app-local-dangerously />
+      <app-local-dangerously/>
     </app-card>
   </section>
 </div>

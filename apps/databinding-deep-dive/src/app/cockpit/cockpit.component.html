@@ -1,14 +1,64 @@
-<div class="row">
-  <div class="col-xs-12">
-    <p>Add new Servers or blueprints!</p>
-    <label>Server Name</label>
-    <input type="text" class="form-control" [(ngModel)]="name" />
-    <label>Server Content</label>
-    <input type="text" class="form-control" [(ngModel)]="content" />
-    <br />
-    <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
-    <button class="btn btn-primary" (click)="onAddBlueprint()">
-      Add Server Blueprint
-    </button>
+<section class="p-8">
+  <h1
+    class="text-slate-900 font-extrabold text-2xl sm:text-3xl lg:text-4xl text-center tracking-tight">
+    Add new Servers or blueprints!</h1>
+  <div class="flex flex-col sm:flex-row justify-center gap-8 my-8">
+    <section class="flex flex-col gap-2">
+      <h1 class="text-slate-900 text-2xl tracking-tight font-bold mb-2">Two Ways Binding</h1>
+      <label
+      ><span class="block">Server Name</span>
+        <input
+          class="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-1 ring-slate-200 shadow-sm"
+          type="text" [(ngModel)]="name"/>
+      </label>
+      <label>
+        <span class="block">Server Content</span>
+        <input
+          class="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-1 ring-slate-200 shadow-sm"
+          type="text" [(ngModel)]="content"/>
+      </label>
+      <section class="flex gap-2 mt-4">
+        <button
+          class="group inline-flex items-center h-9 rounded-md text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-700 text-white hover:bg-slate-800 focus:ring-offset-2 focus:ring-offset-slate-50 focus:ring-slate-400 dark:focus:ring-offset-0 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500"
+          (click)="onAddServer()"
+        >
+          Add Server
+        </button>
+        <button
+          class="group inline-flex items-center h-9 rounded-md text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-700 text-white hover:bg-slate-800 focus:ring-offset-2 focus:ring-offset-slate-50 focus:ring-slate-400 dark:focus:ring-offset-0 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500"
+          (click)="onAddBlueprint()">
+          Add Blueprint
+        </button>
+      </section>
+    </section>
+    <section class="flex flex-col gap-2">
+      <h1 class="text-slate-900 text-2xl tracking-tight font-bold mb-2">Local Reference</h1>
+      <label>
+        <span class="block">Server Name</span>
+        <input
+          class="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-1 ring-slate-200 shadow-sm"
+          type="text" #serverNameInput/>
+      </label>
+      <label>
+        <span class="block">Server Content</span>
+        <input
+          class="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-1 ring-slate-200 shadow-sm"
+          type="text" #serverContentInput/>
+      </label>
+      <section class="flex justify-end gap-2 mt-4">
+        <button
+          class="group inline-flex items-center h-9 rounded-md text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-teal-700 text-white hover:bg-teal-800 focus:ring-offset-2 focus:ring-offset-slate-50 focus:ring-slate-400 dark:focus:ring-offset-0 dark:bg-teal-700 dark:text-slate-100 dark:hover:bg-teal-600 dark:hover:text-white dark:focus:ring-slate-500"
+          (click)="onServerAddition('server')"
+        >
+          Add Server
+        </button>
+        <button
+          class="group inline-flex items-center h-9 rounded-md text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-teal-700 text-white hover:bg-teal-800 focus:ring-offset-2 focus:ring-offset-slate-50 focus:ring-slate-400 dark:focus:ring-offset-0 dark:bg-teal-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500"
+          (click)="onServerAddition('blueprint')">
+          Add Blueprint
+        </button>
+      </section>
+    </section>
   </div>
-</div>
+
+</section>
