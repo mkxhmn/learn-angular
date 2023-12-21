@@ -1,4 +1,17 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  AfterContentChecked,
+  AfterContentInit,
+  AfterViewChecked,
+  AfterViewInit,
+  Component,
+  DoCheck,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges,
+  ViewEncapsulation,
+} from '@angular/core';
 
 export type ServerProps = {
   type: 'server' | 'blueprint';
@@ -12,7 +25,17 @@ export type ServerProps = {
   styleUrls: ['./server-element.component.css'],
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class ServerElementComponent implements OnInit {
+export class ServerElementComponent
+  implements
+    OnInit,
+    OnChanges,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy
+{
   /**
    * Represents a server. This will expose the "server" to the world
    *
@@ -38,8 +61,35 @@ export class ServerElementComponent implements OnInit {
     console.log('constructor called');
   }
 
-  ngOnInit() {
-    console.log('ngOnInit called', this.server);
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('server-element, hello ngOnChanges', changes);
+  }
 
+  ngOnInit(): void {
+    console.log('server-element, hello ngOnInit');
+  }
+
+  ngDoCheck(): void {
+    console.log('server-element, hello ngDoCheck');
+  }
+
+  ngAfterContentInit(): void {
+    console.log('server-element, hello ngAfterContentInit');
+  }
+
+  ngAfterContentChecked(): void {
+    console.log('server-element, hello ngAfterContentChecked');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('server-element, hello ngAfterViewInit');
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('server-element, hello ngAfterViewChecked');
+  }
+
+  ngOnDestroy(): void {
+    console.log('server-element, hello ngOnDestroy');
   }
 }
