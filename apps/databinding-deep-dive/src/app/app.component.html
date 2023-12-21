@@ -10,6 +10,8 @@
     >
       Servers and Blueprints
     </h2>
-    <app-server-element *ngFor="let server of servers" [server]="server" />
+    <app-server-element *ngFor="let server of servers" [server]="server" >
+      <p class="text-xs" #content>hi</p>
+    </app-server-element>
   </section>
 </div>

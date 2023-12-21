@@ -11,6 +11,9 @@ import {
   OnInit,
   SimpleChanges,
   ViewEncapsulation,
+  ViewChild,
+  ElementRef,
+  ContentChild,
 } from '@angular/core';
 
 export type ServerProps = {
@@ -56,6 +59,8 @@ export class ServerElementComponent
     name: '',
     content: '',
   };
+  @ViewChild('heading') heading!: ElementRef<HTMLDivElement>;
+  @ContentChild('content') content!: ElementRef<HTMLParagraphElement>;
 
   constructor() {
     console.log('constructor called');
@@ -66,7 +71,10 @@ export class ServerElementComponent
   }
 
   ngOnInit(): void {
-    console.log('server-element, hello ngOnInit');
+    console.group('server-element, hello ngOnInit');
+    console.log('#heading', this.heading?.nativeElement?.textContent);
+    console.log('#content', this.content?.nativeElement?.textContent);
+    console.groupEnd()
   }
 
   ngDoCheck(): void {
@@ -74,15 +82,18 @@ export class ServerElementComponent
   }
 
   ngAfterContentInit(): void {
-    console.log('server-element, hello ngAfterContentInit');
-  }
+    console.group('server-element, hello ngAfterContentInit');
+    console.log('#content', this.content?.nativeElement?.textContent);
+    console.groupEnd()  }
 
   ngAfterContentChecked(): void {
     console.log('server-element, hello ngAfterContentChecked');
   }
 
   ngAfterViewInit(): void {
-    console.log('server-element, hello ngAfterViewInit');
+    console.group('server-element, hello ngAfterViewInit');
+    console.log('#heading', this.heading?.nativeElement?.textContent);
+    console.groupEnd()
   }
 
   ngAfterViewChecked(): void {
