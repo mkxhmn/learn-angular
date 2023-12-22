@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NgForOf, NgIf } from '@angular/common';
+import { NgForOf, NgIf, NgStyle } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, FormsModule, NgForOf, NgIf],
+  imports: [BrowserModule, FormsModule, NgForOf, NgIf, NgStyle],
   providers: [],
   bootstrap: [AppComponent],
 })
