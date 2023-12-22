@@ -4,9 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NgForOf, NgIf, NgStyle } from '@angular/common';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight.directive';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+  ],
   imports: [BrowserModule, FormsModule, NgForOf, NgIf, NgStyle],
   providers: [],
   bootstrap: [AppComponent],
