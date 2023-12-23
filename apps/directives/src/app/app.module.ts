@@ -3,17 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NgForOf, NgIf, NgStyle } from '@angular/common';
+import { NgClass, NgForOf, NgIf, NgStyle } from '@angular/common';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight.directive';
+import { WonderfulHelloComponent } from './wonderful-hello/wonderful-hello.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
+    WonderfulHelloComponent,
   ],
-  imports: [BrowserModule, FormsModule, NgForOf, NgIf, NgStyle],
+  imports: [BrowserModule, FormsModule, NgForOf, NgIf, NgStyle, NgClass],
   providers: [],
   bootstrap: [AppComponent],
 })
