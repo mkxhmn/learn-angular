@@ -15,7 +15,14 @@
             {{ odd }}
           </li>
         </div>
+        <!--
         <div *ngIf="!onlyOdd">
+          <li class="list-group-item" *ngFor="let even of evens">
+            {{ even }}
+          </li>
+        </div>
+        -->
+        <div *appUnless="onlyOdd">
           <li class="list-group-item" *ngFor="let even of evens">
             {{ even }}
           </li>

@@ -7,6 +7,7 @@ import { NgClass, NgForOf, NgIf, NgStyle } from '@angular/common';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight.directive';
 import { WonderfulHelloComponent } from './wonderful-hello/wonderful-hello.component';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { WonderfulHelloComponent } from './wonderful-hello/wonderful-hello.compo
     BasicHighlightDirective,
     BetterHighlightDirective,
     WonderfulHelloComponent,
+    UnlessDirective,
   ],
   imports: [BrowserModule, FormsModule, NgForOf, NgIf, NgStyle, NgClass],
   providers: [],
