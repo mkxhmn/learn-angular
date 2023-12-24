@@ -1,0 +1,10 @@
+<p>{{ value }}</p>
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="2">2 + 2 = 4</p>
+  <p *ngSwitchCase="5"><strong>five</strong> to the rescue</p>
+  <p *ngSwitchDefault>hello, I'm default case</p>
+</div>
+<div>
+  <button (click)="decrement()">decrement</button>
+  <button (click)="increment()">increment</button>
+</div>
