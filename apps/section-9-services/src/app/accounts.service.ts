@@ -1,6 +1,10 @@
+import { Injectable } from '@angular/core';
+import { LoggingService } from './logging.service';
+
 export type StatusProps = 'active' | 'inactive' | 'unknown';
 export type Accounts = { name: string; status: StatusProps };
 
+@Injectable()
 export class AccountsService {
   accounts: Accounts[] = [
     {
@@ -17,9 +21,12 @@ export class AccountsService {
     },
   ];
 
+  constructor(private loggingService: LoggingService) {}
+
   // Create operation
   addAccount(name: string, status: StatusProps) {
     this.accounts.push({ name, status });
+    this.loggingService.logStatusChange(status);
   }
 
   // Read operation
@@ -35,6 +42,7 @@ export class AccountsService {
   // Update status operation
   updateStatus(index: number, status: StatusProps) {
     this.accounts[index].status = status;
+    this.loggingService.logStatusChange(status);
   }
 
   // Delete operation
