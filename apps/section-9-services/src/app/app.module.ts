@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 import { AccountsService } from './accounts.service';
-import { LoggingService } from './logging.service';
+import { NgForOf } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent, AccountComponent, NewAccountComponent],
-  imports: [BrowserModule, FormsModule],
-  providers: [AccountsService, LoggingService],
+  imports: [BrowserModule, FormsModule, NgForOf],
+  providers: [AccountsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
