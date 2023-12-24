@@ -559,6 +559,79 @@ importers:
         specifier: ~5.2.2
         version: 5.2.2
 
+  apps/section-9-services-assignment:
+    dependencies:
+      '@angular/animations':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/core@17.0.7)
+      '@angular/common':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/core@17.0.7)(rxjs@7.8.1)
+      '@angular/compiler':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/core@17.0.7)
+      '@angular/core':
+        specifier: ^17.0.0
+        version: 17.0.7(rxjs@7.8.1)(zone.js@0.14.2)
+      '@angular/forms':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/common@17.0.7)(@angular/core@17.0.7)(@angular/platform-browser@17.0.7)(rxjs@7.8.1)
+      '@angular/platform-browser':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/animations@17.0.7)(@angular/common@17.0.7)(@angular/core@17.0.7)
+      '@angular/platform-browser-dynamic':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/common@17.0.7)(@angular/compiler@17.0.7)(@angular/core@17.0.7)(@angular/platform-browser@17.0.7)
+      '@angular/router':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/common@17.0.7)(@angular/core@17.0.7)(@angular/platform-browser@17.0.7)(rxjs@7.8.1)
+      bootstrap:
+        specifier: 3.3.7
+        version: 3.3.7
+      rxjs:
+        specifier: ~7.8.0
+        version: 7.8.1
+      tslib:
+        specifier: ^2.3.0
+        version: 2.6.2
+      zone.js:
+        specifier: ~0.14.2
+        version: 0.14.2
+    devDependencies:
+      '@angular-devkit/build-angular':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/compiler-cli@17.0.7)(@types/node@17.0.45)(karma@6.4.0)(typescript@5.2.2)
+      '@angular/cli':
+        specifier: ^17.0.0
+        version: 17.0.7
+      '@angular/compiler-cli':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/compiler@17.0.7)(typescript@5.2.2)
+      '@types/jasmine':
+        specifier: ~5.1.0
+        version: 5.1.4
+      jasmine-core:
+        specifier: ~5.1.0
+        version: 5.1.1
+      karma:
+        specifier: ~6.4.0
+        version: 6.4.0
+      karma-chrome-launcher:
+        specifier: ~3.2.0
+        version: 3.2.0
+      karma-coverage:
+        specifier: ~2.2.0
+        version: 2.2.0
+      karma-jasmine:
+        specifier: ~5.1.0
+        version: 5.1.0(karma@6.4.0)
+      karma-jasmine-html-reporter:
+        specifier: ~2.1.0
+        version: 2.1.0(jasmine-core@5.1.1)(karma-jasmine@5.1.0)(karma@6.4.0)
+      typescript:
+        specifier: ~5.2.2
+        version: 5.2.2
+
   packages/eslint-config-custom:
     dependencies:
       eslint-config-next:
@@ -988,7 +1061,7 @@ packages:
     peerDependencies:
       '@angular/core': 17.0.7
     dependencies:
-      '@angular/core': 17.0.7(rxjs@6.6.7)(zone.js@0.14.2)
+      '@angular/core': 17.0.7(rxjs@7.8.1)(zone.js@0.14.2)
       tslib: 2.5.3
     dev: false
 
@@ -1151,7 +1224,7 @@ packages:
       '@angular/core':
         optional: true
     dependencies:
-      '@angular/core': 17.0.7(rxjs@6.6.7)(zone.js@0.14.2)
+      '@angular/core': 17.0.7(rxjs@7.8.1)(zone.js@0.14.2)
       tslib: 2.5.3
 
   /@angular/core@16.1.0(rxjs@7.8.1)(zone.js@0.13.0):
@@ -1175,6 +1248,7 @@ packages:
       rxjs: 6.6.7
       tslib: 2.6.2
       zone.js: 0.14.2
+    dev: false
 
   /@angular/core@17.0.7(rxjs@7.8.1)(zone.js@0.14.2):
     resolution: {integrity: sha512-mEkelXkzEi6+A9GjdKOSGGzQAfo1iAjVTn6YsplNUeGE5JgDZYZ7sXGQqs0Lin7dzJxnPAgGjCOl7SpWLXIPSQ==}
@@ -1186,7 +1260,6 @@ packages:
       rxjs: 7.8.1
       tslib: 2.6.2
       zone.js: 0.14.2
-    dev: false
 
   /@angular/forms@16.1.0(@angular/common@16.1.0)(@angular/core@16.1.0)(@angular/platform-browser@16.1.0)(rxjs@7.8.1):
     resolution: {integrity: sha512-B3mg4lQTogQgWdR+zZeTMIBfBbK2XuG8MRZ5iQbipIXkyLyxOtUZCH87eZYpoTzr127rF0rLTDwdTy1cCHHyQg==}
@@ -1261,9 +1334,9 @@ packages:
       '@angular/core': 17.0.7
       '@angular/platform-browser': 17.0.7
     dependencies:
-      '@angular/common': 17.0.7(@angular/core@17.0.7)(rxjs@6.6.7)
+      '@angular/common': 17.0.7(@angular/core@17.0.7)(rxjs@7.8.1)
       '@angular/compiler': 17.0.7(@angular/core@17.0.7)
-      '@angular/core': 17.0.7(rxjs@6.6.7)(zone.js@0.14.2)
+      '@angular/core': 17.0.7(rxjs@7.8.1)(zone.js@0.14.2)
       '@angular/platform-browser': 17.0.7(@angular/animations@17.0.7)(@angular/common@17.0.7)(@angular/core@17.0.7)
       tslib: 2.5.3
     dev: false
@@ -1297,8 +1370,8 @@ packages:
         optional: true
     dependencies:
       '@angular/animations': 17.0.7(@angular/core@17.0.7)
-      '@angular/common': 17.0.7(@angular/core@17.0.7)(rxjs@6.6.7)
-      '@angular/core': 17.0.7(rxjs@6.6.7)(zone.js@0.14.2)
+      '@angular/common': 17.0.7(@angular/core@17.0.7)(rxjs@7.8.1)
+      '@angular/core': 17.0.7(rxjs@7.8.1)(zone.js@0.14.2)
       tslib: 2.5.3
     dev: false
 
@@ -1390,7 +1463,7 @@ packages:
     dependencies:
       '@ampproject/remapping': 2.2.1
       '@babel/code-frame': 7.22.5
-      '@babel/generator': 7.22.5
+      '@babel/generator': 7.23.6
       '@babel/helper-compilation-targets': 7.22.5(@babel/core@7.21.8)
       '@babel/helper-module-transforms': 7.22.5
       '@babel/helpers': 7.22.5
@@ -1402,7 +1475,7 @@ packages:
       debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.3
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1517,9 +1590,9 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
-      '@babel/compat-data': 7.23.5
+      '@babel/compat-data': 7.22.5
       '@babel/core': 7.22.5
-      '@babel/helper-validator-option': 7.23.5
+      '@babel/helper-validator-option': 7.22.5
       browserslist: 4.22.2
       lru-cache: 5.1.1
       semver: 6.3.1
@@ -1567,6 +1640,24 @@ packages:
       '@babel/helper-member-expression-to-functions': 7.22.5
       '@babel/helper-optimise-call-expression': 7.22.5
       '@babel/helper-replace-supers': 7.22.20(@babel/core@7.23.2)
+      '@babel/helper-skip-transparent-expression-wrappers': 7.22.5
+      '@babel/helper-split-export-declaration': 7.22.6
+      semver: 6.3.1
+    dev: true
+
+  /@babel/helper-create-class-features-plugin@7.23.6(@babel/core@7.22.5):
+    resolution: {integrity: sha512-cBXU1vZni/CpGF29iTu4YRbOZt3Wat6zCoMDxRF1MayiEc4URxOj31tT65HUM0CRpMowA3HCJaAOVOUnMf96cw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.22.5
+      '@babel/helper-annotate-as-pure': 7.22.5
+      '@babel/helper-environment-visitor': 7.22.20
+      '@babel/helper-function-name': 7.23.0
+      '@babel/helper-member-expression-to-functions': 7.23.0
+      '@babel/helper-optimise-call-expression': 7.22.5
+      '@babel/helper-replace-supers': 7.22.20(@babel/core@7.22.5)
       '@babel/helper-skip-transparent-expression-wrappers': 7.22.5
       '@babel/helper-split-export-declaration': 7.22.6
       semver: 6.3.1
@@ -2543,7 +2634,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.22.5
-      '@babel/helper-create-class-features-plugin': 7.22.5(@babel/core@7.22.5)
+      '@babel/helper-create-class-features-plugin': 7.23.6(@babel/core@7.22.5)
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
@@ -3228,7 +3319,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.22.5
-      '@babel/helper-create-class-features-plugin': 7.22.5(@babel/core@7.22.5)
+      '@babel/helper-create-class-features-plugin': 7.23.6(@babel/core@7.22.5)
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
@@ -5889,6 +5980,11 @@ packages:
   /boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: true
+
+  /bootstrap@3.3.7:
+    resolution: {integrity: sha512-qcFaisBrcBhTFkz1IUnGDYnX6ZWfFzH8zOixUDtHW9Ip+r+7MfMFav2rzy7cIHc7rgIg7xjhWBoo1mS/U26j4g==}
+    engines: {node: '>=0.10.1'}
+    dev: false
 
   /bootstrap@3.4.1:
     resolution: {integrity: sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==}
@@ -9927,7 +10023,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       proc-log: 3.0.0
-      semver: 7.5.1
+      semver: 7.5.4
       validate-npm-package-name: 5.0.0
     dev: true
 
@@ -9962,7 +10058,7 @@ packages:
       npm-install-checks: 6.1.1
       npm-normalize-package-bin: 3.0.1
       npm-package-arg: 10.1.0
-      semver: 7.5.1
+      semver: 7.5.4
     dev: true
 
   /npm-pick-manifest@9.0.0:
