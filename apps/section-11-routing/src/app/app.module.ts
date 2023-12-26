@@ -11,6 +11,7 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
 import { RouterModule, Routes } from '@angular/router';
+import { NgForOf } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -22,8 +23,16 @@ const routes: Routes = [
     component: UsersComponent,
   },
   {
+    path: 'users/:id/:name',
+    component: UserComponent,
+  },
+  {
     path: 'servers',
     component: ServersComponent,
+  },
+  {
+    path: 'servers/:id/edit',
+    component: EditServerComponent,
   },
 ];
 
@@ -37,7 +46,7 @@ const routes: Routes = [
     EditServerComponent,
     ServerComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes), NgForOf],
   providers: [ServersService],
   bootstrap: [AppComponent],
 })
