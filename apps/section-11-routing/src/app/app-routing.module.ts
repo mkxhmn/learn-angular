@@ -9,6 +9,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { authGuardService } from './auth-guard.service';
+import { canDeactivateGuard } from './servers/edit-server/can-deactivate.guard';
 
 const routes: Routes = [
   {
@@ -42,6 +43,7 @@ const routes: Routes = [
             component: ServerComponent,
           },
           {
+            canDeactivate: [canDeactivateGuard],
             path: ':id/edit',
             component: EditServerComponent,
           },
