@@ -19,7 +19,7 @@ export class EditServerComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.group();
+    console.group('edit server component');
     console.log(this.route.snapshot.queryParams);
     console.log(this.route.snapshot.fragment);
     console.groupEnd();
