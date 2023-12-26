@@ -28,6 +28,9 @@ export class ServerComponent implements OnInit {
   }
 
   async onEdit() {
-    await this.router.navigate(['edit'], { relativeTo: this.route });
+    await this.router.navigate(['edit'], {
+      relativeTo: this.route,
+      queryParamsHandling: 'preserve',
+    });
   }
 }
