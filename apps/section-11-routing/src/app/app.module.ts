@@ -11,7 +11,7 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
 import { RouterModule, Routes } from '@angular/router';
-import { NgForOf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -54,7 +54,13 @@ const routes: Routes = [
     EditServerComponent,
     ServerComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes), NgForOf],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    NgForOf,
+    NgIf,
+  ],
   providers: [ServersService],
   bootstrap: [AppComponent],
 })
