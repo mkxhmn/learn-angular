@@ -12,6 +12,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
 import { RouterModule, Routes } from '@angular/router';
 import { NgForOf, NgIf } from '@angular/common';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,14 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'not-found',
+    component: PageNotFoundComponent,
+  },
+  {
+    path: '**', // catch all path that is unknown to your app
+    redirectTo: '/not-found',
+  },
 ];
 
 @NgModule({
@@ -53,6 +62,7 @@ const routes: Routes = [
     UserComponent,
     EditServerComponent,
     ServerComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
