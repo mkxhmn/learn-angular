@@ -27,16 +27,25 @@ const routes: Routes = [
   },
   {
     path: 'servers',
-    canActivate: [authGuardService],
+    // canActivate: [authGuardService],
     component: ServersComponent,
     children: [
       {
-        path: ':id',
-        component: ServerComponent,
-      },
-      {
-        path: ':id/edit',
-        component: EditServerComponent,
+        path: '',
+        /**
+         * @see {@link https://angular.io/guide/router-tutorial-toh#canactivatechild-guarding-child-routes}
+         */
+        canActivateChild: [authGuardService],
+        children: [
+          {
+            path: ':id',
+            component: ServerComponent,
+          },
+          {
+            path: ':id/edit',
+            component: EditServerComponent,
+          },
+        ],
       },
     ],
   },
