@@ -10,6 +10,7 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { authGuardService } from './auth-guard.service';
 import { canDeactivateGuard } from './servers/edit-server/can-deactivate.guard';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 const routes: Routes = [
   {
@@ -53,8 +54,13 @@ const routes: Routes = [
   },
   {
     path: 'not-found',
-    component: PageNotFoundComponent,
+    component: ErrorPageComponent,
+    data: { message: 'data not found' },
   },
+  /*  {
+    path: 'not-found',
+    component: PageNotFoundComponent,
+  },*/
   {
     path: '**', // catch all path that is unknown to your app
     redirectTo: '/not-found',
