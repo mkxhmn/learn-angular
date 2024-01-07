@@ -8,13 +8,13 @@ import { map, filter } from 'rxjs/operators';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  private observableSubscription: Subscription;
+  // private observableSubscription: Subscription;
   private customSubscription: Subscription;
 
   constructor() {}
 
   ngOnInit() {
-    /*
+/*
     this.observableSubscription = interval(1_000).subscribe((count) => {
       console.log(count);
     });
@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     const custom = new Observable((observer) => {
       let count = 0;
+
 
       setInterval(() => {
         observer.next(count);
@@ -61,7 +62,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.observableSubscription.unsubscribe();
+    // this.observableSubscription.unsubscribe();
     this.customSubscription.unsubscribe();
   }
 }
